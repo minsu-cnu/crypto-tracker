@@ -108,7 +108,7 @@ function Price() {
         <ChangeItem>
           <h2>12시간 전보다</h2>
           <ChangeValue
-            isPositive={state?.priceData.percent_change_12h ? true : false}
+            isPositive={state?.priceData.percent_change_12h >= 0 ? true : false}
           >
             {state?.priceData.percent_change_12h}%
           </ChangeValue>
@@ -116,7 +116,7 @@ function Price() {
         <ChangeItem>
           <h2>24시간 전보다</h2>
           <ChangeValue
-            isPositive={state?.priceData.percent_change_24h ? true : false}
+            isPositive={state?.priceData.percent_change_24h >= 0 ? true : false}
           >
             {state?.priceData.percent_change_24h}%
           </ChangeValue>
