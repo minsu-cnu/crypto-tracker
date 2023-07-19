@@ -78,7 +78,6 @@ const ChangeValue = styled.span<IChangeValue>`
 
 function Price() {
   const { state } = useLocation<RouteState>();
-  console.log(state?.priceData);
   return (
     <div>
       <AthPrice>

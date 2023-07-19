@@ -47,7 +47,7 @@ const Header = styled.header`
     left: 0;
     padding: 10px;
     border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: ${(props) => props.theme.boxBgColor};
   }
 `;
 
@@ -57,7 +57,7 @@ const Overview = styled.div`
   align-items: center;
   margin: 15px auto;
   padding: 15px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: ${(props) => props.theme.boxBgColor};
   border-radius: 10px;
 `;
 
@@ -93,7 +93,7 @@ const Tab = styled.span<{ $isActive: boolean }>`
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 400;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: ${(props) => props.theme.boxBgColor};
   padding: 7px 0px;
   border-radius: 10px;
   color: ${(props) =>
@@ -168,7 +168,9 @@ interface PriceData {
   };
 }
 
-function Coin() {
+interface ICoinProps {}
+
+function Coin({}: ICoinProps) {
   /* const [loading, setLoading] = useState(true);
   const [info, setInfo] = useState<InfoData>();
   const [priceInfo, setPriceInfo] = useState<PriceData>(); */
